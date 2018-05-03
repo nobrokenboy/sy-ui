@@ -1,0 +1,19 @@
+{
+  "name": "sy-ui",
+  "version": "1.0.0",
+  "description": "基于vue的组件",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "组件",
+    "常用的"
+  ],
+  "author": "nobrokenboy",
+  "license": "ISC",
+  "devDependencies": {
+    "vue": "^2.5.16"
+  }
+}
