@@ -1,0 +1,54 @@
+@import "../../../../styles/variable";
+@mainColor:@themeColor;
+.u-validate-field{
+    position: relative;
+    &:after{
+        clear: both;
+        display: table;
+        content: " ";
+    }
+    .vali-left{
+        font-size: 16px;
+        float: left;
+        display: flex;
+        align-items: center;
+        &:after{
+            content: ":";
+        }
+    }
+    .vali-right{
+        float: left;
+    }
+    .vali-error{
+        color: @mainColor;
+        float: left;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        p{
+            padding: 5px 0;
+            font-size: 16px;
+        }
+    }
+    &.error{
+        .vali-error{
+            transition: height .3s ease-in-out
+        }
+    }
+    &.shake{
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+}
+@keyframes shake {
+    0%,to {
+        transform: translateZ(0)
+    }
+    10%,30%,50%,70%,90% {
+        transform: translate3d(-10px,0,0)
+    }
+    20%,40%,60%,80% {
+        transform: translate3d(10px,0,0)
+    }
+}
